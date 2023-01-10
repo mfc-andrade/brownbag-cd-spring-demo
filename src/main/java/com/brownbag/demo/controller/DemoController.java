@@ -3,7 +3,7 @@ package com.brownbag.demo.controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@RestController("")
 public class DemoController {
 
     @GetMapping("/demo")
@@ -11,7 +11,7 @@ public class DemoController {
         return "Demo String";
     }
 
-    @GetMapping
+    @GetMapping("/")
     public String hello() {
         return "Hello World";
     }
