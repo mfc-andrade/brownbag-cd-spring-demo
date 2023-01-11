@@ -1,10 +1,9 @@
-FROM eclipse-temurin:17-jdk-alpine as builder
+FROM maven:3.8.7-eclipse-temurin-17-alpine as builder
 WORKDIR /opt/app
-COPY .mvn/ .mvn
-COPY mvnw pom.xml ./
-RUN ./mvnw dependency:go-offline
+COPY pom.xml ./
+RUN mvn dependency:go-offline
 COPY ./src ./src
-RUN ./mvnw clean install
+RUN mvn clean install
 
 
 FROM eclipse-temurin:17-jre-alpine
