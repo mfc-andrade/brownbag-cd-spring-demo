@@ -34,6 +34,6 @@ stages:
         command: buildAndPush
         repository: 'brownbagcdspringdemo'
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
-        containerRegistry: 'demopipelines.azurecr.io'
+        containerRegistry: 'a4b63c05-db5b-4cc1-8638-df962cf69a7f'
         tags: |
           $(Build.BuildId)
