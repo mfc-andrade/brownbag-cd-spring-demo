@@ -2,7 +2,7 @@ FROM maven:3.8.7-eclipse-temurin-17-alpine as builder
 WORKDIR /opt/app
 COPY pom.xml ./
 COPY ./src ./src
-RUN mvn clean install
+RUN mvn package
 
 FROM eclipse-temurin:17-jre-alpine
 WORKDIR /opt/app
