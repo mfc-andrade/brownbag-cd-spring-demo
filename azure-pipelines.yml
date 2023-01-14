@@ -22,7 +22,7 @@ steps:
     goals: 'package'
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(system.defaultworkingdirectory)/target'
+    SourceFolder: '$(System.DefaultWorkingDirectory)/target'
     Contents: '**/*.jar'
     TargetFolder: '$(build.ArtifactStagingDirectory)'
 
